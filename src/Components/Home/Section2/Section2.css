@@ -1,0 +1,13 @@
+.welcome-paragraph{
+    width: 69%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.courses{
+    font-family: Segoe UI;
+    font-weight: Semibold;
+    /* font-size: 60px; */
+}
+.course-des{
+    font-size: 13px;
+}

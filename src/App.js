@@ -1,22 +1,35 @@
-import logo from './logo.svg';
+import React, { createContext } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./Components/Header/Header";
+import DmsNav from "./Components/DmsNav/DmsNav";
+import Home from "./Components/Home/Home";
+// import DmsNav from "./Components/DmsNav/DmsNav";
+
+export const UserContext = createContext();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Projuktir Pathshala</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[]}>
+      <Router>
+        <Header/>
+        <DmsNav/>
+        <Home/>
+        <Switch>
+          {/* Header Link */}
+          {/* <Route exact path="/fb" component={}/>
+          <Route exact path="/linkedin" component={}/>
+          <Route exact path="/twitter" component={}/>
+          <Route exact path="/pinterest" component={}/> */}
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

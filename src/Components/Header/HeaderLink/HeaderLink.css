@@ -1,0 +1,33 @@
+.header-link{
+    margin: 5px 0 0 40px;
+    transition: all 0.5s;
+}
+
+.upper-link{
+    /* display: flex;
+    justify-content: right; */
+    width: fit-content;
+    margin-right: 8% !important;
+}
+@media (max-width: 1025px){
+    .upper-link{
+        margin-right: 4% !important;
+    }
+    @media (max-width: 769px){
+        .upper-link{
+            margin-right: 0 !important;
+        }
+    }
+    @media (max-width: 426px){
+        .upper-link{
+            display: flex !important;
+            justify-content: center;
+            width: 100% !important;
+            margin: 0 auto;
+        }
+        
+    }
+}
+.header-link:hover {
+    transform: scale(1.2);
+}
